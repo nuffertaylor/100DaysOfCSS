@@ -1,0 +1,123 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #c6e2e9;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.hover-button {
+	position: relative;
+	cursor: pointer;
+	font-size: 1.2em;
+	padding: 1em;
+  background: #c6e2e9;
+}
+
+.trace {
+	height: 1px;
+	width: 1px;
+	position: absolute;
+}
+
+.hover-button:hover {
+	transition: filter 1.5s ease-in;
+	filter: brightness(92%);
+}
+
+.hover-button:hover > .top {
+		animation: trace-top .5s forwards;
+}
+
+.hover-button:hover > .right {
+		animation: trace-right .25s forwards;
+	animation-delay: .5s;
+}
+
+.hover-button:hover > .bottom {
+		animation: trace-bottom .5s forwards;
+	animation-delay: .75s;
+}
+
+.hover-button:hover > .left {
+		animation: trace-left .25s forwards;
+	animation-delay: 1.25s;
+}
+
+@keyframes trace-top {
+	0% {
+		left: -.05em;
+		top: -.05em;
+		background: white;
+	}
+	100% {
+		top: -.05em;
+		left: -.05em;
+		width: 6.95em;
+		background: white;
+	}
+}
+
+@keyframes trace-right {
+	0% {
+		top: -.05em;
+		left: 6.9em;
+		background: white;
+	}
+	100% {
+		height: 3.25em;
+		top: -.05em;
+		left: 6.9em;
+		background: white;
+	}
+}
+
+@keyframes trace-bottom {
+		0% {
+		right: -.05em;
+		top: 3.2em;
+		background: white;
+	}
+	100% {
+		top: 3.2em;
+		right: -.05em;
+		width: 6.95em;
+		background: white;
+	}
+}
+
+@keyframes trace-left {
+		0% {
+		bottom: -.05em;
+		left: -.05em;
+		background: white;
+	}
+	100% {
+		height: 3.25em;
+		bottom: -.05em;
+		left: -.05em;
+		background: white;
+	}
+}

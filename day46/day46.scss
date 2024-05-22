@@ -1,0 +1,132 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,600,400,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  background: #121115;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow: hidden;
+}
+
+.err-head {
+	color: red;
+	font-weight: 600;
+	font-size: 1.5em;
+	text-align: center;
+	padding: .5em;
+}
+
+.err-desc {
+	width: 90%;
+	text-align: center;
+	color: white;
+	font-weight: 400;
+	font-size:1.1em;
+	margin-left: 5%;
+	padding-bottom: .5em;
+}
+
+.err-report-box {
+	width: 96%;
+	margin-left: 2%;
+	margin-top: .5em;
+	background: #2a2e35;
+	border-radius: 10px;
+	color: white;
+	padding-top: 10px;
+	overflow-y: scroll;
+	height: 255px;
+}
+
+.err-report-container {
+	width: 80%;
+	margin-left: 10%;
+	text-align: justify;
+	margin-top: 15px;
+	font-size: .8em;
+}
+
+.req {
+	text-align: left;
+	color: red;
+	font-size: .7em;
+	margin-top: 5px;
+}
+
+.req:after {
+	content: "*";
+}
+
+.desc-1 {
+	font-weight: 700;
+}
+
+.desc-2 {
+	font-size: 1.1em;
+	font-weight: 600;
+	margin-top: 35px;
+}
+
+.desc-3 {
+	font-size: .8em;
+	margin-top:5px;
+}
+
+.desc-4 {
+	font-size: 1em;
+	margin-top: 20px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+.name-label-container {
+	display: flex;
+}
+
+.name-label-container > * {
+	width: 50%;
+	font-weight: 600;
+	margin-top: 5px;
+	font-size: .9em;
+}
+
+.email-input {
+	width: 90%;
+	height: 25px
+}
+
+.submit-btn {
+	cursor: pointer;
+	background: #70cb7c;
+	width: 20%;
+	padding: 10px;
+	font-size: 1.2em;
+	text-align: center;
+	border-radius: 5%;
+	color: #2a2e35;
+	font-weight: 700;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.fake-google-warning {
+	color: #72757a;
+	margin-bottom: 30px;
+}
+
+a {
+	color: #34627a;
+}

@@ -1,0 +1,70 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #efc6ae;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.egg {
+	background: #efece5;
+	width: 100px;
+	border-radius: 50px 50px 50px 50px / 80px 80px 50px 50px;
+	height: 125px;
+	position: absolute;
+	box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+	animation: eggy 4s linear infinite;
+	left: 150px;
+}
+
+@keyframes eggy {
+	0% {
+		top: -200px;
+		transform: scale(.8, 1.1);
+	}
+	20% {
+		top: 160px;
+		transform: scale(1.1, .95);
+	}
+	25% {
+		top: 150px;
+		transform: scale(.95, 1.02);
+	}
+	26% {
+		top: 145px;
+		transform: scale(1);
+	}
+	27%, 70% {
+		top: 150px;
+		transform: rotate(0);
+	}
+	30% {
+		transform: rotate(.03turn);
+	}
+		35% {
+		transform: rotate(-.05turn);
+	}
+		40% {
+		transform: rotate(.05turn);
+	}
+	45% {
+		transform: rotate(0);
+	}
+	80% {
+		transform: scale(.9, 1.1);
+	}
+	90%, 100% {
+		top: 420px;
+	}
+}
+
