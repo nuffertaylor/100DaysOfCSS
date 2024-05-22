@@ -1,0 +1,125 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+	display:grid;
+	justify-items:center;
+	width:100%;
+	height:100%;
+	background: #f0f0f0;
+	user-select: none;
+}
+.watch{
+	display:flex;
+}
+
+.outer{
+	width:200px;
+	height:200px;
+	background: #6D7065;
+
+}
+.inner{
+	width:190px;
+	height:190px;
+	background:#616161;
+}
+.inin{
+	width:180px;
+	height:180px;
+	background:gray;
+	overflow:hidden;
+	position:relative;
+}
+.circle{
+	border-radius:25%;
+}
+.gridcenter{
+	display:grid;
+	place-items:center;
+}
+.crank{
+	height:30px;
+	width:6px;
+	background:#272B1D;
+	border-radius:25%;
+	margin-top:50px;
+}
+.ridge{
+	height:1px;
+	width:100%;
+	background:#4A4E3F;
+	margin-top:2px;
+}
+.wallpaper{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	display:flex;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.red{background:#DA2F4F;}
+.orange{background:#F98C35;}
+.yellow{background:#F7D83F;}
+.green{background:#80E387;}
+.blue{background:#1481B3;}
+.violet{background:#8043AD;}
+.col{
+	width:16.66%;
+	height:100%;
+}
+.text_section{
+	z-index:100;
+	position:absolute;
+	right:15px;
+	top:15px;
+	color:#f8f8f8;
+	font-weight:600;
+	text-shadow: 2px 2px 8px #000000;
+	
+}
+.date{
+	text-align:right;
+}
+.time{
+	font-size:40px;
+}
+.watch_band{
+	width:150px;
+	height:100px;
+	background:
+linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+background-color: #131313;
+background-size: 20px 20px;
+}
+.btop{
+	border-radius:0 0 15% 15%;
+}
+.bbottom{
+	border-radius:15% 15% 0 0;
+}

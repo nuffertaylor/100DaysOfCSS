@@ -1,0 +1,118 @@
+$bg: #353f4d;
+$shadow: #5c493c;
+$light: #b6a898;
+$lighter: #decbb6;
+$lightest: #f5dfc6;
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $bg;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.circle {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	position: relative;
+	overflow: hidden;
+}
+
+.sky {
+	width: 200px;
+	height: 140px;
+	background: lightblue;
+	transition: background 1s;
+	animation: daynight 5s linear infinite;
+}
+
+@keyframes daynight {
+	25% {
+		background: $bg;
+	}
+	70% {
+		background: lightblue;
+	}
+}
+
+.ground {
+	height: 60px;
+	width: 200px;
+	background: tan;
+}
+
+.left-tri {
+   width: 0px;
+   height: 0px;
+   border-style: solid;
+   border-width: 0 45px 73px 57px;
+   border-color: transparent transparent $light transparent;
+   transform: rotate(0deg);
+	position: absolute;
+	top: 67px;
+	left: 42px;
+	transition: border-color 1s;
+	animation: left-tri-shadow 5s linear infinite;
+}
+
+@keyframes left-tri-shadow {
+	35%, 45%, 90% { border-color: transparent transparent $light transparent; }
+	60%, 70%, 85% { border-color: transparent transparent $lighter transparent; }
+	80% { border-color: transparent transparent $lightest transparent; }
+	0%, 20%, 100% { border-color: transparent transparent $shadow transparent; }
+}
+
+.right-tri {
+	clip-path: polygon(30% 100%, 100% 100%, 0% 0%);
+	height: 73px;
+	width: 58px;
+	position: absolute;
+	top: 67px;
+	left:100px;
+	background: $shadow;
+	transition: background 1s;
+	animation: right-tri-shadow 5s linear infinite;
+}
+
+@keyframes right-tri-shadow {
+	15%, 70% { background: $shadow; }
+	80% { background: $light; }
+	85% { background: $lighter; }
+	0%, 5%, 90%, 100% { background: $lightest; }
+}
+
+.sun {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: yellow;
+	top: 100px;
+	left: 80px;
+	animation: sun-move 5s linear infinite;
+}
+
+@keyframes sun-move {
+	    from { transform: rotate(0deg) translateX(115px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(115px) rotate(-360deg); }
+}

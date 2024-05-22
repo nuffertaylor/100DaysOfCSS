@@ -1,0 +1,306 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,600,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #B6D0E2;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.box {
+	width: 300px;
+	height: 200px;
+	background: green;
+	box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+}
+
+$offwhite: #fbf7f5;
+
+.header {
+	height: 60px;
+	width: 100%;
+	background: #900C3F;
+	color: $offwhite;
+}
+
+.body {
+	height: 140px;
+	width: 100%;
+	background: $offwhite;
+	position: relative;
+}
+
+.row {
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 12px;
+}
+
+.row > * {
+	width: 50%;
+	line-height: 1;
+}
+
+.ibig {
+	font-weight: 600;
+}
+
+.ismall {
+	font-size: .8em;
+}
+
+.right {
+	display: grid;
+	align-items: end;
+	justify-items: right;
+}
+
+.row2 {
+	padding-top: 5px;
+}
+
+$grey: #bfbfbf;
+
+.line {
+	height: 1px;
+	width: 90%;
+	background: $grey;
+	position: absolute;
+	left: 5%;
+	z-index: 5;
+}
+
+.l1 {
+	top: 25%;
+}
+
+.l2 {
+	top: 50%;
+}
+
+.l3 {
+	top: 75%;
+}
+
+.days {
+	width: 90%;
+	position: absolute;
+	left: 5%;
+	color: $grey;
+	display: flex;
+	text-align: center;
+	top: 82.5%;
+}
+
+.days > * {
+	width: 14%;
+	font-size: .8em;
+}
+
+$red: #ea7b77;
+$blue: #82a3f8;
+
+.marker {
+	width: 10px;
+	height: 2px;
+	border-radius: 1px;
+	margin-top: 6px;
+}
+
+.red, .red > * { background: $red; }
+.blue, .blue > * { background: $blue; }
+
+.legend {
+	display: flex;
+	font-size: .8em;
+	font-weight: 600;
+	color: $grey;
+	position: absolute;
+	top: 10px;
+	right: 5%;
+}
+
+.legend > * {
+	margin-left: 10px;
+}
+
+.dot {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	cursor: pointer;
+	position: absolute;
+	z-index: 200;
+}
+
+.dot > * {
+	position: absolute;
+	border-radius: 5px;
+	font-size: .8em;
+	color: $offwhite;
+	font-weight: 600;
+	padding: 2px;
+	bottom: 10px;
+	left: -10px;
+	opacity: 0;
+	transition: opacity .5s;
+	pointer-events: none;
+}
+
+.dot.blue > * {
+	left: -6px;
+}
+
+.dot:hover div {
+	opacity: 1;
+}
+
+.v1 {
+	top: 35%;
+	left: 10%;
+}
+
+.v2 {
+	top: 28%;
+	left: 23%;
+}
+
+.v3 {
+	top: 48%;
+	left: 36%;
+}
+
+.v4 {
+	top: 38%;
+	left: 48%;
+}
+
+.v5 {
+	top: 45%;
+	left: 61%;
+}
+
+.v6 {
+	top: 30%;
+	left: 73%;
+}
+
+.v7 {
+	top: 37%;
+	left: 86%;
+}
+
+.b1 { top: 55%; }
+.b2 { top: 45%; }
+.b3 { top: 66%; }
+.b4 { top: 69%; }
+.b5 { top: 59%; }
+.b6 { top: 40%; }
+.b7 { top: 55%; }
+
+.cl {
+	width: 13%;
+	height: 2px;
+	position: absolute;
+	z-index: 100;
+}
+
+.cl1 {
+	left: 11%;
+	top: 33%;
+	transform: rotate(-15deg)
+}
+
+.cl2 {
+	width: 15%;
+	left: 23%;
+	top: 39%;
+	transform: rotate(36deg)
+}
+
+.cl3 {
+	left: 37%;
+	top: 44%;
+	transform: rotate(-24deg)
+}
+
+.cl4 {
+	left: 49%;
+	top: 43%;
+	transform: rotate(16deg)
+}
+
+.cl5 {
+	left: 61.5%;
+	top: 38.5%;
+	transform: rotate(-33deg)
+}
+
+.cl6 {
+	left: 74%;
+	top: 35%;
+	transform: rotate(15deg)
+}
+
+.bl1 {
+	left: 11%;
+	top: 51.5%;
+	transform: rotate(-19deg)
+}
+
+.bl2 {
+	width: 15%;
+	left: 23%;
+	top: 56.5%;
+	transform: rotate(38deg)
+}
+
+.bl3 {
+	left: 36%;
+	top: 68.5%;
+	transform: rotate(8deg)
+}
+
+.bl4 {
+	left: 49%;
+	top: 66%;
+	transform: rotate(-20deg)
+}
+
+.bl5 {
+	width: 15%;
+	left: 61%;
+	top: 50%;
+	transform: rotate(-37deg)
+}
+
+.bl6 {
+	width: 15%;
+	left: 73%;
+	top: 48.5%;
+	transform: rotate(28deg)
+}

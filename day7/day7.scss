@@ -1,0 +1,242 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300,500);
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #B0BC98;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.innerbox{
+	height:300px;
+	width:300px;
+	background:blue;
+	box-shadow: 5px 5px 15px;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.header{
+	width:100%;
+	height:25%;
+	background:#87A878;
+	display:flex;
+}
+
+.content{
+	width:100%;
+	height:75%;
+	background:#FAF9F6;
+}
+
+.hamburger_circle{
+	display: grid;
+	grid-template-rows:1fr 1fr;
+	width:25%;
+	height:100%;
+	justify-items:center;
+	cursor:pointer;
+}
+.line{
+	width:40px;
+	height:3px;
+	border-radius:15px;
+	background:#BFBFBF;
+	margin:2px;
+}
+.line75{
+	width: 30px !important;
+}
+.circle{
+	height: 7px;
+  width: 7px;
+  background-color: #BFBFBF;
+  border-radius: 50%;
+}
+.linecircle-container{
+	width:40px;
+	display:grid;
+	grid-template-columns:.75fr .25fr;
+	align-items:end;
+	justify-items:center;
+	padding:2px;
+}
+.menutext{
+	color:#BFBFBF;
+	width:50%;
+	font-size:20px;
+	display:grid;
+	place-items:center;
+}
+.searchButton{
+	content:url('https://icon-library.com/images/search-icon-white-png/search-icon-white-png-10.jpg');
+	cursor:pointer;
+	width:35px;
+	height:35px;
+}
+.searchButtonContainer{
+	width:25%;
+	display:grid;
+	place-items:center;
+}
+.hamburger_circle:hover{
+	opacity:75%;
+}
+.searchButtonContainer:hover{
+	opacity:75%;
+}
+.verticalline{
+	height:75%;
+	width:3px;
+	background:#BFBFBF;
+	position:absolute;
+	left:25px;
+}
+.sideCircle{
+	background:#FAF9F6;
+	border:3px solid #BFBFBF;
+	z-index:100;
+}
+.contentItem{
+	padding-top:15px;
+	display:grid;
+	grid-template-columns:.22fr 1fr;
+	grid-template-rows: 1fr .2fr;
+	align-items:center;
+	cursor:pointer;
+}
+.contentItem:hover{
+	color:#87A878;
+}
+.contentItem:hover .sideCircle{
+	border-color:#87A878;
+}
+.circleWrapper{
+display:grid;
+place-items:center;
+}
+.notificationTime{
+	font-size:15px;
+	font-style: italic;
+}
+.notificationText{
+	grid-column-start: 2;
+	display:flex;
+	font-size:16px;
+}
+.personName{
+	font-weight:bold;
+	margin-right:3px;
+}
+
+.searchbox {
+  padding: 15px 25px 15px 25px;
+  border: 2px solid #bfbfbf;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  width: 170px;
+  height: 15px;
+  font-style: italic;
+	position:absolute;
+	top:-137px;
+	left:-140px;
+}
+
+.fadein-sb{
+	animation-name: fadein-searchbox;
+	animation-duration:.5s;
+	animation-iteration-count: 1;
+}
+.fadeout-sb{
+	animation-name: fadein-searchbox;
+	animation-duration:.5s;
+	animation-direction: reverse;
+	animation-iteration-count: 1;
+}
+.moveBox{
+	animation-name:slideRight;
+	animation-duration:.75s;
+	left:150px;
+}
+.returnBox{
+	animation-name:slideRight;
+	animation-duration:.75s;
+	animation-direction: reverse;
+	left:50%;
+}
+.slideLeft{
+	animation-name:slideLeft;
+	animation-duration:.75s;
+}
+.slideLeftReverse{
+	animation-name:slideLeft;
+	animation-duration:.75s;
+	animation-direction: reverse;
+}
+.menuBox{
+	background:#6B855F;
+	width:125px;
+	height:250px;
+	position:absolute;
+	top:-125px;
+	left:-125px;
+	display:grid;
+	grid-template-rows: repeat(5,1fr);
+	place-items:center;
+	color:white;
+	z-index:-1;
+}
+.menuItem{
+	width:100%;
+	height:100%;
+	cursor:pointer;
+	text-align:center;
+	line-height:50px;
+	user-select:none;
+}
+.menuItem:hover{
+	background:#799D68;
+}
+.menuItem:active{
+	background:#4E6543;
+}
+
+@keyframes fadein-searchbox{
+	0%{
+		left:-100px;
+		opacity:0;
+	}
+	100%{
+		left:-140px;
+	opacity:100%;
+	}
+}
+@keyframes slideRight {
+	0%{  left: 50%;}
+	100%{ left:150px; }
+}
+@keyframes slideLeft{
+	0%{left:-100px;}
+	80%{left:-130px;}
+	100%{left:-125px;}
+}

@@ -1,0 +1,171 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: hsl(225, 33%, 16%);
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.bhill {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	background: #28314d;
+	border-radius: 50%;
+	bottom: -100px;
+	left: -50px;
+	z-index: 5;
+}
+
+.bh2 {
+	left: 200px;
+}
+
+.fhill {
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	background: #323c5b;
+	border-radius: 50%;
+	bottom: -170px;
+	z-index: 10;
+}
+
+.fh1 {
+	left: -80px;
+}
+
+.fh2 {
+	bottom: -125px;
+	left: 45px;
+}
+.fh3 {
+	right: -100px;
+}
+
+.moon {
+	height: 80px;
+	width: 80px;
+	border-radius: 50%;
+	background: #f5edc2;
+	box-shadow: 0 0 15px 0 #F6EDBD;
+	overflow: hidden;
+	position: absolute;
+	z-index: 1;
+	animation: moveup 1.5s ease-in forwards;
+	left: 50px;
+}
+
+@keyframes moveup {
+	0%{top: 300px;}
+	100%{top: 50px;}
+	
+}
+
+.moonimg {
+	height: 100px;
+	width: 100px;
+	top: -10px;
+	left: -10px;
+	position: absolute;
+	filter: sepia(70%);
+}
+
+.weather-box {
+	width: 100%;
+	height: 80px;
+	background: white;
+	position: absolute;
+	z-index: 20;
+	bottom: 0;
+}
+
+.weather-box {
+	display: flex;
+}
+
+.weather-box > * {
+	margin-left: 20px;
+	margin-top: 15px;
+}
+
+.temp {
+	font-size: 2.5em;
+}
+.row {
+	display: flex;
+	width: 300px;
+	margin-top: 5px;
+}
+
+.row > *{
+	width: 50%;
+}
+
+.drop {
+	position: absolute;
+	padding: 0;
+	background-color: #02a4d3;
+	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.44);
+	width: 200px;
+	height: 200px;		
+  border-radius: 0% 100% 100% 100%;
+  transform: rotate(45deg);
+  width: 15px;
+  height: 15px;
+	z-index: 18;
+	top: -50px;
+	animation: fall 1.2s ease-in infinite;
+}
+
+.drop-lg {
+	@extend .drop;
+}
+
+.drop-md {
+	@extend .drop;
+	transform: rotate(45deg) scale(.6);
+}
+
+.drop-sm {
+	@extend .drop;
+	transform: rotate(45deg) scale(.3);
+}
+
+@for $i from 1 through 10 {
+	.dl#{$i} {
+		left: ((random(40) + 15) * $i) + px;
+		animation-delay: (.1 * random(20)) + s;
+	}
+	
+	.dm#{$i} {
+		left: ((random(40) + 15) * $i) + px;
+		animation-delay: (.1 * random(25)) + s;
+	}
+	.ds#{$i} {
+		left: ((random(40) + 15) * $i) + px;
+		animation-delay: (.1 * random(25)) + s;
+	}
+}
+
+@keyframes fall {
+	0% { top: -50px; }
+	100% {
+		top: 400px;
+	}
+}

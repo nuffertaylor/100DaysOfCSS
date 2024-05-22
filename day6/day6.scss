@@ -1,0 +1,168 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,600,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #ea7b77;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+$offwhite: #faf7f5;
+$darkwhite: hsl(27, 37%, 91%);
+$darkerwhite: hsl(27, 37%, 75%);
+$brown: #746352;
+
+.box {
+	width: 325px;
+	height: 300px;
+	background: $offwhite;
+	box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+	border-radius: 5px;
+	display: flex;
+	overflow: hidden;
+	color: $brown;
+}
+
+.left {
+	width: 60%;
+	height: 100%;
+}
+
+.right {
+	width: 40%;
+	height: 100%;
+}
+
+.item {
+	height: 99px;
+	background: $darkwhite;
+	cursor: pointer;
+	transition: background .5s;
+}
+
+.item:hover {
+	background: $darkerwhite;
+}
+
+.item > * {
+	width: 100%;
+	height: 50%;
+	display: grid;
+	justify-items: center;
+}
+
+.mt {
+	margin-top: 2px;
+}
+
+.topi {
+	font-weight: 600;
+	font-size: 1.2em;
+	align-items: end;
+}
+
+.boti {
+	font-size: .8em;
+	align-items: start;
+}
+
+.left > * {
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+
+.av-con {
+	height: 125px;
+}
+
+.name-con {
+	height: 50px;
+}
+
+.name {
+	font-weight: 600;
+	font-size: 1.1em;
+}
+
+.title {
+	font-size: .8em;
+	margin-top:-10px;
+}
+
+.but-con {
+	height: 125px;
+}
+
+.button {
+	font-weight: 700;
+	width: 100px;
+	border: 1px solid $brown;
+	padding: 5px;
+	text-align: center;
+	border-radius: 10px;
+	background: none;
+	transition: all .5s;
+	user-select: none;
+	cursor: pointer;
+}
+
+.button:hover {
+	color: $offwhite;
+	background: $brown;
+}
+
+.b2 {
+	margin-top: -50px;
+}
+
+.img {
+	width: 90px;
+	margin-top:-25px;
+}
+
+.av-b1 {
+	width: 94px;
+	height: 94px;
+	border: 2px solid $brown;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	border-right-color: transparent;
+}
+.av-b2 {
+	width: 86px;
+	height: 86px;
+	border: 2px solid $brown;
+	border-radius: 50%;
+	display: grid;
+	place-items: center;
+	border-left-color: transparent;
+}
+.av-b3 {
+	overflow: hidden;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
