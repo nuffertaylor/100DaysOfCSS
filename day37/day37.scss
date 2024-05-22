@@ -1,0 +1,95 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: hsl(214, 72%, 66%);
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.item {
+	width: 175px;
+	height: 150px;
+	background: #fff;
+	box-shadow: 4px 8px 12px 0 rgba(0,0,0,0.1);
+	position: absolute;
+	top: 125px;
+	left: 100px;
+	animation: 3s caro linear infinite
+	
+}
+
+@keyframes caro {
+	0%, 93%, 100% {
+		top: 125px;
+		left: 100px;
+		transform: scale(1);
+		z-index: 3;
+	}
+	33%, 40% {
+		top: 125px;
+		left: 200px;
+		transform: scale(.6);
+		z-index: 1;
+	}
+	66%, 73% {
+		top: 125px;
+		left: 0px;
+		transform: scale(.6);
+		z-index: 1;
+	}
+}
+
+.head {
+	height: 35px;
+	width: 100%;
+	background: orange;
+}
+
+.paragraph {
+	padding-left: 16px;
+	padding-top: 16px;
+}
+
+.line {
+	height: 5px;
+	width: 140px;
+	background: #ddd;
+	margin-bottom: 8px;
+}
+
+@for $i from 0 through 6 {
+	.l#{$i} {
+		width: (140 - random(30)) + px;
+	}
+}
+
+.i1 {
+	animation-delay: 1s;
+	top: 125px;
+	left: 200px;
+	transform: scale(.6);
+	z-index: 1;
+}
+
+.i2 {
+	animation-delay: 2s;
+	top: 125px;
+		left: 0px;
+		transform: scale(.6);
+		z-index: 1;
+}

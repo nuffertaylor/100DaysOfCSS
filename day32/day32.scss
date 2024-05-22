@@ -1,0 +1,96 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #f1c18c;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.counter-container {
+	width: 150px;
+	background: white;
+	height: 50px;
+	border-radius: 50px;
+	display: flex;
+	box-shadow: 4px 8px 12px 0 rgba(0,0,0,0.1);
+}
+
+.minus, .plus {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	margin-top: 5px;
+	font-size: 48px;
+	font-weight: 600;
+	position: relative;
+	cursor: pointer;
+	transition: all .5s;
+	user-select: none;
+}
+
+.minus-txt {
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top: -12px;
+	left: 12px;
+}
+
+.plus-txt {
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top: -8px;
+	left: 7px;
+}
+
+.minus {
+	margin-left: 5px;
+	color: #d47471;
+}
+
+.minus:hover {
+	background: #d47471;
+	color: white;
+}
+
+.plus {
+	color: #9dcf7e;
+}
+
+.plus:hover {
+	background: #9dcf7e;
+	color: white;
+}
+
+#counter {
+	width: 60px;
+	height: 50px;
+	display: grid;
+	place-items: center;
+	font-size: 1.5em;
+	font-weight: 600;
+	color: #6f859d;
+}

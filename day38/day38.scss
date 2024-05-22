@@ -1,0 +1,96 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+$c1: #efefef;
+$c2: #333f4e;
+
+// use only the available space inside the 400x400 frame
+#frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $c2;
+  color: #333;
+	font-family: 'Red Hat Display', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.shield {
+   width: 150px;
+   height: 275px;
+	position: absolute;
+	left: 120px;
+	top: 50px;
+	cursor: pointer;
+	transition: transform 1s ease-in;
+}
+
+#s1 {
+	transform: scale(.7);
+	z-index: 1200;
+}
+
+#s1 > * {
+	position: absolute;
+	color: $c1;
+	background: $c1;
+}
+
+#s1 > .name {
+	background: $c2;
+}
+
+#s2 {
+	transform: scale(0);
+	z-index: 2500;
+}
+
+#s2 > * {
+	position: absolute;
+	color: $c2;
+	background: $c2;
+}
+
+#s2 > .name {
+	background: $c1;
+}
+
+.oval {
+	top: 10px;
+   width: 150px; 
+   height: 40px; 
+   border-radius: 75px / 20px;
+   z-index: 100;
+}
+
+.square {
+	top: 30px;
+   width: 150px; 
+   height: 85px; 
+	 
+}
+
+.triangleround {
+		top: 50px;
+	left: 7px;
+    transform: rotate(135deg);
+    width:136px;
+    height:136px;
+    position:absolute;
+    border-radius: 50px 10px 50px 50px;
+}
+
+.name {
+	font-weight: 700;
+	font-size: 2.3em;
+	top: 225px;
+	left: 10px;
+}

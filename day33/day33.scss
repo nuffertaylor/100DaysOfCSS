@@ -1,0 +1,87 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.sun {
+	width: 100px;
+	height: 100px;
+	background-image: linear-gradient(#e37d6b, #f5b782);
+	border-radius: 50%;
+	position: absolute;
+	left: 150px;
+	top: 100px;
+}
+
+.sky {
+	width: 100%;
+	height: 60%;
+	background-image: linear-gradient(#d9b0a1, #f9dcc3);
+}
+
+.hill0 {
+	position: absolute;
+	width: 500px;
+	background: #e37d6b;
+	height: 200px;
+	transform: rotate(24deg);
+	left: -70px;
+}
+
+.hill1 {
+	position: absolute;
+	background: #c76a60;
+	width: 500px;
+	height: 200px;
+	top: 250px;
+	transform: rotate(-13deg);
+	right: 0;
+	
+	.bump0 {
+		width: 70px;
+		height: 150px;
+		border-radius: 50%;
+		background: #c76a60;
+		position: absolute;
+		right: -40px;
+		top: -1px;
+	}
+}
+
+.hill2 {
+	background: #bd4650;
+	position: absolute;
+	width: 500px;
+	top: 300px;
+	height: 200px;
+	transform: rotate(33deg);
+	left: -120px
+}
+
+.hill3 {
+	background: #a33e43;
+	position: absolute;
+	width: 500px;
+	top: 300px;
+	height: 200px;
+	transform: rotate(-8deg);
+	
+}
