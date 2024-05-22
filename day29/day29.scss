@@ -1,0 +1,80 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
+
+$green: hsl(112, 41%, 82%);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $green;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+box-sizing: border-box;
+}
+
+.input-bar {
+	width: 300px;
+	height: 50px;
+	position: absolute;
+	top: 175px;
+	left: 50px;
+}
+
+#sb1 {
+	top: 225px;
+}
+
+#sb2 {
+	top: 275px;
+}
+
+#sb3 {
+	top: 325px;
+}
+
+#search, .suggestion-bar {
+	background: #fff;
+	position: absolute;
+	padding: 15px;
+	width: 300px;
+	border: none;
+	box-shadow: 4px 8px 12px 0 rgba(0,0,0,0.1);
+	font-weight: 600;
+	box-sizing: border-box;
+	color: hsl(112, 41%, 45%);
+}
+
+.suggestion-bar {
+	position: absolute;
+	left: 50px;
+	opacity: 0;
+	font-weight: 300;
+}
+
+#search::placeholder {
+  color: #BFC8BB;
+}
+
+#sicon {
+	position: absolute;
+	right: 5px;
+	top: 3px;
+	color: $green;
+	font-size: 40px !important;
+}
+
+.bbb {
+	font-weight: 600;
+}

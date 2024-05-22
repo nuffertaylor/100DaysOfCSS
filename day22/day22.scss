@@ -1,0 +1,184 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: hsl(205, 26%, 23%);
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.title {
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+	color: white;
+	.top {
+		font-size: 20px;
+	}
+	.bottom {
+		font-weight: 700;
+		font-size: 24px;
+	}
+}
+
+.big-circle {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	border: 10px hsl(205, 26%, 16%) solid;
+	position: absolute;
+	left: 135px;
+	top: 130px;
+	box-sizing: border-box;
+	display: grid;
+	place-items: center;
+	
+	.label {
+		.l1 {
+			font-weight: 700;
+			font-size: 35px;
+		}
+		.l2 {
+			font-size: 18px;
+		}
+	}
+}
+
+.label {
+	color: white;
+	text-align: center;
+}
+
+.l2 {
+	color: hsl(204, 18%, 37%);
+}
+
+.circle-row {
+	width: 100%;
+	display: flex;
+	position: absolute;
+	bottom: 30px;
+	justify-content: space-around;
+}
+
+.small-circle {
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 10px hsl(205, 26%, 16%) solid;
+	display: grid;
+	place-items: center;
+	.label {
+		.l1 {
+			font-weight: 700;
+			font-size: 20px;
+		}
+	}
+}
+
+
+.circular-progress {
+  --size: 130px;
+  --half-size: calc(var(--size) / 2);
+  --stroke-width: 10px;
+  --radius: calc((var(--size) - var(--stroke-width)) / 2);
+  --circumference: calc(var(--radius) * pi * 2);
+  --dash: calc((var(--progress) * var(--circumference)) / 100);
+	animation: progress-animation-a 1s linear 0s 1 forwards;
+}
+
+.circular-progress-sm {
+  --size: 90px;
+  --half-size: calc(var(--size) / 2);
+  --stroke-width: 10px;
+  --radius: calc((var(--size) - var(--stroke-width)) / 2);
+  --circumference: calc(var(--radius) * pi * 2);
+  --dash: calc((var(--progress) * var(--circumference)) / 100);
+	position: absolute;
+	bottom: 30px;
+}
+
+#sm1 {
+	animation: progress-animation-b 1s linear 0s 1 forwards;
+	left: 55px;
+}
+
+#sm2 {
+	animation: progress-animation-c 1s linear 0s 1 forwards;
+	right: 55px;
+}
+
+.circular-progress circle {
+  cx: var(--half-size);
+  cy: var(--half-size);
+  r: var(--radius);
+  stroke-width: var(--stroke-width);
+  fill: none;
+  stroke-linecap: round;
+}
+
+.circular-progress circle.fg {
+  transform: rotate(-90deg);
+  transform-origin: var(--half-size) var(--half-size);
+  stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+  transition: stroke-dasharray 0.3s linear 0s;
+  stroke: hsl(157, 63%, 64%);
+}
+
+.circular-progress-sm circle.fg {
+	stroke: hsl(186, 71%, 71%);
+}
+
+@property --progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes progress-animation-a {
+  from {
+    --progress: 0;
+  }
+  to {
+    --progress: 63;
+  }
+}
+
+@keyframes progress-animation-b {
+  from {
+    --progress: 0;
+  }
+  to {
+    --progress: 54;
+  }
+}
+
+@keyframes progress-animation-c {
+  from {
+    --progress: 0;
+  }
+  to {
+    --progress: 81;
+  }
+}
+
+#big-circle-progress {
+	position: absolute;
+	top: 130px;
+	left: 135px;
+}

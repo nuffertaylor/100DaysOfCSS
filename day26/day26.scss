@@ -1,0 +1,143 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$bg: #C3DDD7;
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $bg;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#card {
+	width: 200px;
+	height: 150px;
+	background: green;
+	overflow: hidden;
+	position: relative;
+}
+
+.corner-tab-row-container {
+	position: absolute;
+	z-index: 3;
+}
+
+.corner-tab-row {
+	width: 200px;
+	height: 40px;
+	overflow: hidden;
+	position: relative;
+}
+
+.corner-tab {
+	background: #8391A1;
+	height: 40px;
+	width: 100px;
+	transform: rotate(30deg);
+	left: 125px;
+	top: -17px;
+	position: absolute;
+}
+
+#num-container {
+	font-size: 25px;
+	font-weight: 600;
+	color: white;
+	position: absolute;
+	left: 180px;
+}
+
+#next-button {
+	width: 100%;
+	background: pink;
+	text-align: center;
+	color: white;
+	height: 30px;
+	padding: 5px;
+	box-sizing: border-box;
+	font-size: 1em;
+	font-weight: 600;
+	z-index: 2;
+	cursor: pointer;
+	user-select: none;
+}
+
+.card-content {
+	height: 120px;
+	background: white;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+
+#quote-title {
+	font-weight: 600;
+	position: absolute;
+	top: 25px;
+	text-align: center;
+	width: 100%;
+}
+
+#quote-content {
+	font-style: italic;
+	position: absolute;
+	top: 50px;
+	text-align: center;
+	width: 80%;
+	left: 10%;
+	font-size: 12px;
+}
+
+.fade-in {
+    animation: fadeInAnimation ease-in .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fade-out {
+    animation: fadeOutAnimation ease-in .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+ 
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+			transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+				transform: scale(1.5);
+     }
+}

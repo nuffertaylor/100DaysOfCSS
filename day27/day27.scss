@@ -1,0 +1,97 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: hsl(43, 89%, 64%);
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: grid;
+	place-items: center;
+}
+
+.block {
+	height: 300px;
+	width: 250px;
+	background: white;
+	box-shadow: 5px 5px 5px 2px #000;
+}
+
+.top {
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.day {
+	font-weight: 700;
+	font-size: 32px;
+}
+
+.date {
+	font-style: italic;
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+.line {
+	margin-top: 20px;
+	margin-bottom: 30px;
+	width: 76%;
+	margin-left: 12%;
+	height: 2px;
+	background: black;
+}
+
+.item {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 20px;
+	.objective {
+		width: 53%;
+		transition: all .5s;
+	}
+	
+	.circle {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		border: 1px solid black;
+		margin-top: 2px;
+		cursor: pointer;
+	}
+	
+	.check {
+		position: absolute;
+		right: 17px;
+		bottom: -5px;
+		color: green;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity .5s;
+	}
+}
+
+.material-symbols-outlined {
+	font-size: 27px !important;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 24
+}
