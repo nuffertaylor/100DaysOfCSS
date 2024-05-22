@@ -1,0 +1,88 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,500);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+	  background-image: linear-gradient(to bottom right, #FF5858, #FFFF45);
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+.upload-container {
+	width: 300px;
+	height: 250px;
+	background: #fbf7f5;
+	border-radius: 5px;
+	box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
+}
+
+.top {
+	width: 100%;
+	height: 50px;
+	display: grid;
+	place-items: center;
+	border-bottom: 2px solid #d8d8d8;
+	font-weight: 500;
+}
+
+.cloud-container {
+	width: 100%;
+	display: grid;
+	place-items: center;
+	height: 150px;
+}
+
+.cloud {
+	cursor: pointer;
+	user-select: none;
+	color: #bdbdbd;
+	padding: 5px;
+	border: dashed 4px #d8d8d8;
+}
+
+.cloud > span {
+	font-size: 75px;
+}
+
+.btn-container {
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+
+.upload-btn {
+	cursor: pointer;
+	user-select: none;
+	background: #86ca53;
+	color: white;
+	text-align: center;
+	width: 75px;
+	padding: 5px;
+	border-radius: 5px;
+	border-bottom: solid 2px #5a8a36;
+}
+
+.upload-btn:hover {
+	box-shadow: 1px 1px 5px 1px #86ca53;
+}

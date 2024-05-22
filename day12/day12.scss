@@ -1,0 +1,96 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,600,300);
+
+$light: #f7d9c4;
+$dark: #eeae81;
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $light;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.bg-qt {
+	position: absolute;
+	font-size: 10em;
+	color: white;
+	opacity: .5;
+	z-index: 1;
+	left: 5%;
+}
+
+.qt {
+	z-index: 2;
+	position: absolute;
+	top: 85px;
+	width: 90%;
+	left: 5%;
+	color: white;
+	font-weight: 600;
+	font-size: 1.25em;
+	line-height: 1.3em;
+}
+
+.author {
+	position: absolute;
+	color: white;
+	font-weight: 600;
+	font-style: italic;
+	top: 330px;
+	left: 5%;
+	font-size: 1.1em;
+}
+
+#oblit {
+	background: $dark;
+	cursor: pointer;
+}
+
+#oblit:hover ~ .definition{
+	opacity: 1;
+}
+
+.definition {
+	position: absolute;
+	width: 250px;
+	background: $dark;
+	top: 90px;
+	left: 50px;
+	opacity: 0;
+	transition: all .5s ease-in;
+}
+
+.pronunciation {
+	background: white;
+	padding: 5px;
+	color: $dark;
+}
+
+.def {
+	padding: 5px;
+}
+
+.pointer {
+	position: absolute;
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+	top: -10px;
+	left: 115px;
+}

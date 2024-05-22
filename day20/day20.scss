@@ -1,0 +1,122 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:500,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #a2d2ff;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#mail {
+	position: absolute;
+	z-index: 2;
+	height: 200px;
+	left: 100px;
+	top: 100px;
+	transition: height, top, left, .5s;
+}
+
+.mail-small {
+	height: 110px !important;
+	top: 80px !important;
+	left: 50px !important;
+}
+
+.vertical {
+	left: 84px;
+	top: 48px;
+	width: 8px;
+	background: black;
+	height: 80px;
+	z-index: 1;
+}
+
+.mailbox-container {
+	position: absolute;
+	top: 50px;
+	left: 400px;
+	transition: all 3s linear;
+}
+
+.mailbox-container > * {
+	position: absolute;
+}
+
+.mailbox {
+	height: 300px;
+	z-index: 3;
+}
+
+.white-box {
+	background: white;
+	width: 98px;
+	height: 90px;
+	left: 172px;
+	top: 47px;
+	z-index: 3;
+}
+
+#send-btn {
+	background: #ffafcc;
+	width: 80px;
+	padding: 6px;
+	text-align: center;
+	border-radius: 5px;
+	position: absolute;
+	z-index: 3;
+	top: 300px;
+	left: 157px;
+	cursor: pointer;
+	user-select: none;
+	transition: all .8s;
+}
+
+.mail-motion {
+	animation: 1s bob infinite;
+	position: absolute;
+	top: 100px;
+	opacity: 0;
+	transition: opacity .5s;
+}
+
+.line {
+	width: 50px;
+	height: 5px;
+	border-radius: 3px;
+	background: black;
+}
+
+.l2 {
+	margin-top: 20px;
+	margin-left: 13px;
+	width: 42px;
+}
+
+.l3 {
+	margin-top: 33px;
+	margin-left: 2px;
+	width: 22px;
+}
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}

@@ -1,0 +1,154 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$bg: #4b4842;
+$fg: #f8cf65;
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $bg;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.card {
+	width: 300px;
+	height: 175px;
+	background: $fg;
+	border-radius: 10px;
+	display: grid;
+	place-items: center;
+	color: $bg;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.center:hover > .card {
+	transform: rotateX(180deg);
+	.bike {
+		opacity: 0;
+	}
+	
+	.chopper {
+		opacity: 1;
+	}
+	
+}
+
+.bike > i {
+	font-size: 7em;
+}
+
+.bike {
+	position: relative;
+	animation: squish 1s infinite;
+	opacity: 1;
+	transition: opacity .5s linear;
+}
+
+@keyframes squish {
+	0%, 100% { transform: scaleY(1); }
+	50% { transform: scaleY(.9); }
+}
+
+.border-left, .border-right {
+	position: absolute;
+	width: 80px;
+	background: $fg;
+	height: 100%;
+	z-index: 5;
+}
+
+.border-left {
+	left: 0;
+}
+
+.border-right {
+	right: 0;
+}
+
+.bikeline {
+	position: absolute;
+	z-index: 4;
+	background: $bg;
+	height: 4px;
+	width: 20px;
+	border-radius: 4px;
+	bottom: 8px;
+	right: -100px;
+	animation: right-left 1s linear infinite;
+}
+
+.c {
+	animation: left-right 1s linear infinite;
+}
+
+@keyframes right-left {
+	from { right: -100px; }
+	to { right: 150px; }
+}
+
+@keyframes left-right {
+	to { right: -100px; }
+	from { right: 150px; }
+}
+
+@for $i from 1 through 5 {
+	.bikeline#{$i} {
+		width: (random(30)) + px;
+		animation-delay: (.1 * random(20)) + s;
+	}
+	
+	.c#{$i} {
+		top: random(100) + px;
+	}
+}
+
+.chopper {
+	color: $bg;
+	position: absolute;
+	opacity: 0;
+	transition: opacity .5s linear;
+	transition-delay: .5s;
+	transform: rotateX(180deg) rotateY(180deg);
+	transition: opacity .5s linear;
+	span {
+			font-size: 6em;
+	}
+}
+
+.ci {
+	animation: bob 1s ease-in-out infinite;
+}
+
+@keyframes bob {
+	0%, 100% {
+		transform: translateY(5px);
+	}
+	50% {
+		transform: translateY(-5px);
+	}
+}
