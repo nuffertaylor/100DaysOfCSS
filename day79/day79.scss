@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+  color: #333;
+	font-family: "Press Start 2P", system-ui;
+}
+
+$blue0: #898cf4;
+$blue1: #8184ec;
+$blue2: #797ce4;
+$blue3: #7073dc;
+$blue4: #686bd2;
+$blue5: #595ccd;
+$blue6: #5154c5;
+$blue7: #484cbd;
+
+.all-squares {
+	transform: rotate(45deg) translate3D(-164px, -104px, 0);
+}
+
+.square-row {
+	display: flex;
+	width: 520px;
+}
+
+.bonus-item {
+	width: 634px;
+}
+
+.s, .sr {
+	display: grid;
+	place-items: center;
+}
+
+.s {
+	animation: light-to-dark 4s linear infinite;
+}
+
+.sr {
+	animation: dark-to-light 4s linear infinite;
+}
+
+@keyframes light-to-dark {
+	0%, 12.5% { background: $blue0; }
+	12.5%, 25% { background: $blue1; }
+	25%, 37.5% { background: $blue2; }
+	37.5%, 50% { background: $blue3; }
+	50%, 62.5% { background: $blue4; }
+	62.5%, 75% { background: $blue5; }
+	75%, 87.5% { background: $blue6; }
+	87.5%, 100% { background: $blue7; }
+}
+
+@keyframes dark-to-light {
+	0%, 12.5% { background: $blue7; }
+	12.5%, 25% { background: $blue6; }
+	25%, 37.5% { background: $blue5; }
+	37.5%, 50% { background: $blue4; }
+	50%, 62.5% { background: $blue3; }
+	62.5%, 75% { background: $blue2; }
+	75%, 87.5% { background: $blue1; }
+	87.5%, 100% { background: $blue0; }
+}
+
+
+@for $i from 0 through 7 {
+	$x: (104 - ($i * 13)) + px;
+	.square#{$i} {
+		width: $x;
+		height: $x;
+		animation-delay: ($i * 0.5) + s;
+	}
+}
+
+.speech {
+	color: white;
+	position: absolute;
+	top: 450px;
+	width: 300px;
+	left: 50px;
+	font-size: 8px;
+	animation: text-slide 90s linear infinite;
+}
+
+@keyframes text-slide {
+	0% { top: 450px; }
+	90%, 100% {
+		top: -600px;
+	}
+}

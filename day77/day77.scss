@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$background:#e63946;
+$offwhite:#f1faee;
+
+.frame 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $background;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.circle
+{
+	position:absolute;
+	width:100px;
+	height:100px;
+	border-radius:50%;
+	top:150px;
+	animation:sway 1.5s linear infinite;
+}
+
+#circle1
+{
+	background:#03045e;
+	z-index:9;
+}
+
+#circle2
+{
+	background:#023e8a;
+	animation-delay:-.02s;
+	opacity:.7;
+	z-index:8;
+}
+
+#circle3
+{
+	background:#0077b6;
+	animation-delay:-.04s;
+	opacity:.6;
+	z-index:7;
+}
+
+#circle4
+{
+	background:#0096c7;
+	animation-delay:-.06s;
+	opacity:.6;
+	z-index:6;
+}
+
+#circle5
+{
+	background:#00b4d8;
+	animation-delay:-.08s;
+	opacity:.6;
+	z-index:5;
+}
+
+#circle6
+{
+	background:#48cae4;
+	animation-delay:-.1s;
+	opacity:.6;
+	z-index:4;
+}
+
+#circle7
+{
+	background:#90e0ef;
+	animation-delay:-.12s;
+	opacity:.6;
+	z-index:3;
+}
+
+#circle8
+{
+	background:#ade8f4;
+	animation-delay:-.14s;
+	opacity:.6;
+	z-index:2;
+}
+
+#circle9
+{
+	background:#caf0f8;
+	animation-delay:-.16s;
+	opacity:.6;
+	z-index:1;
+}
+
+@keyframes sway
+{
+	0%{left:0px;}
+	10%{left:0px;}
+	25%{left:150px;}
+	50%{left:300px;}
+	60%{left:300px;}
+	75%{left:150px;}
+	100%{left:0px;}
+}

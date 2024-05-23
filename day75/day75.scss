@@ -1,0 +1,79 @@
+$num-planes: 5;
+
+$background: #5fdde5;
+
+.frame 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $background;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center 
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	perspective: 1500px;
+}
+
+.ball
+{
+		transform-style: preserve-3d;
+		width:200px;
+		height:200px;
+		position: relative;
+		animation: ball 7s ease-in-out infinite;
+
+}
+
+.circle
+{
+	position:absolute;
+	width:200px;
+	height:200px;
+	border-radius:50%;
+	background:white;
+	opacity:.25;
+}
+
+@for $i from 1 through $num-planes
+{
+		$nullBase: $i - 1;
+		$degree: (180 / $num-planes) * $nullBase;
+	.plane-#{$i}
+	{
+		transform: rotateX(($degree)+deg);
+	}
+}
+
+@keyframes ball {
+	0% {
+		transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+	}
+	25% {
+		transform: rotateY(90deg) rotateX(45deg) rotateZ(20deg);
+	}
+	50% {
+		transform: rotateY(90deg) rotateX(300deg) rotateZ(150deg);
+	}
+	75% {
+		transform: rotateY(0deg) rotateX(45deg) rotateZ(120deg);
+	}
+	100% {
+		transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+	}
+}

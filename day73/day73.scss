@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$background: #5fdde5;
+$shadow: #00a1ab;
+
+.frame 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $background;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center 
+{
+  position: absolute;
+  top: 180px;
+  left: 100px;
+}
+
+#pos1
+{
+	position:absolute;
+	top:180px;
+	left:201px;
+	animation: rotate 12s linear infinite;
+}
+
+#pos2
+{
+		position:absolute;
+		top:180px;
+		left:201px;
+		animation: rotate 12s linear infinite;   
+	animation-delay: -3s;
+}
+
+#pos3
+{
+	position:absolute;
+	top:180px;
+	left:201px;
+	animation: rotate 12s linear infinite;   
+	animation-delay: -6s;
+}
+
+#pos4
+{
+	position:absolute;
+	top:180px;
+	left:201px;
+	animation: rotate 12s linear infinite;   
+	animation-delay: -9s;
+
+}
+
+span
+{
+	font-size: 30px;
+	color:white;
+	text-shadow: 2px 2px 2px $shadow;
+	user-select: none;
+}
+
+.block
+{
+	position:absolute;
+	z-index:2;
+	background:$background;
+	width:400px;
+	height:180px;
+}
+
+#below
+{
+	top:225px;
+}
+
+@keyframes rotate
+{
+	20%
+	{
+		top:180px;
+		left:201px;
+	}
+	25%
+	{
+		top:140px;
+		left:201px;
+	}
+	50%
+	{
+		top:140px;
+		left:750px;
+	}
+	60%
+	{
+		top:225px;
+		left:750px;
+	}
+	95%
+	{
+		top:225px;
+		left:201px;
+	}
+	100%
+	{
+		top:180px;
+		left:201px;
+	}
+}

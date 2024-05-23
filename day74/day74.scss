@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$background: #bb596b;
+$lightpink: #f96d80;
+$darkpeach: #ff9a76;
+$outline: #ffc4a3;
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $background;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.container
+{
+	position:absolute;
+	width:150px;
+	height:75px;
+	top:175px;
+	left:125px;
+}
+
+.circle
+{
+	border-radius:50%;
+	width:30px;
+	height:30px;
+	display:inline-block;
+	color:$outline;
+	text-align:center;
+	line-height:28px;
+	font-size:25px;
+	border: 2px solid $outline;
+	user-select:none;
+	cursor:pointer;
+	transition: all .75s ease-in-out;
+}

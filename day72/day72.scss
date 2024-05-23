@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$bgcolor: #43b2f2;
+$maincolor: #f2437b;
+
+.frame
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $bgcolor;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.circle
+{
+	width:200px;
+	height:200px;
+	border-radius:50%;
+	border: 2px solid $maincolor;
+	top:100px;
+	left:100px;
+	position:absolute;
+}
+
+@for $i from 1 through 15
+{
+	.circle-#{$i}
+	{
+		animation: spin-#{$i} 4s ease-in-out infinite;
+	}
+	
+	@keyframes spin-#{$i}
+	{
+		$start: ($i * 4);
+		#{$start}%
+	{
+		transform: rotateX(0) rotateY(0) rotateZ(0);
+	}
+	100% 
+	{
+			transform: rotateX(360deg) rotateY(-360deg) rotateZ(0);
+	}
+}
+}
+
+
