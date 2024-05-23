@@ -1,0 +1,57 @@
+$bgcolor: #2d4059;
+$color1: #ea5455;
+$color2: #f07b3f;
+$color3: #ffd460;
+
+.frame 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $bgcolor;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.object
+{
+	position: absolute;
+	width: 80%;
+	height: 80%;
+  top: 10%;
+  left: 10%;
+  border: 1px solid $color2;
+}
+
+@keyframes spin
+{
+	from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes elongate
+{
+	50%
+  {
+    border-radius: 50%; 
+    width: 10%; 
+    left:45%;
+  }
+}
+
+@for $i from 3 through 10
+{
+  .object-#{$i}
+  {
+    animation: spin #{$i}s ease-in-out infinite, elongate 4s ease-in-out infinite;
+  }
+}

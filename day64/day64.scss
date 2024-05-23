@@ -1,0 +1,55 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$bgcolor: #24a19c;
+$color1: #ff5f40;
+$color2: #6ebfb5;
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $bgcolor;
+  color: $bgcolor;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.hover_button
+{
+	position: absolute;
+	width: 200px;
+	height: 75px;
+	background: $color2;
+	color: white;
+	top: 160px;
+	left: 100px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 25px;
+	line-height: 75px;
+	box-shadow: 15px 15px $color1;
+	cursor: pointer;
+	transition: all linear .25s;
+	user-select: none;
+	
+	&:hover
+	{
+		background: $color1;
+		top:175px;
+		left:115px;
+		box-shadow: -15px -15px $color2;
+	}
+	
+	&:active
+	{
+		opacity: .75;
+	}
+}

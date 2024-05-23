@@ -1,0 +1,102 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+$bg: #292929;
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $bg;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#button-container {
+	position: absolute;
+	top: 140px;
+	left: 140px;
+	cursor: pointer;
+}
+
+.circle {
+	border: 5px solid white;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+}
+
+#circle-top {
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	border-color: white;
+	left: 5px;
+	// animation: rotate 3s linear infinite;
+}
+
+.mic {
+	position: absolute;
+	top: 22px;
+	left: 42px;
+}
+
+.pill {
+	height: 55px;
+	width: 25px;
+	background: white;
+	border-radius: 25px;
+	position: absolute;
+}
+
+#pill-inner {
+	height: 15px;
+	width: 5px;
+	background: $bg;
+	border-radius: 25px;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.connector {
+	position: absolute;
+	background: white;
+	height: 25px;
+	width: 5px;
+	left: 10px;
+	top: 40px;
+}
+
+.base {
+	position: absolute;
+	background: white;
+	top: 65px;
+	width: 25px;
+	height: 5px;
+	border-radius: 10px;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg); 
+		top: 0px;
+	}
+	50% {
+		top: 5px;
+	}
+	100% {
+		transform: rotate(360deg);
+		top: 0px;
+	}
+}

@@ -1,0 +1,58 @@
+$bgcolor: #eaeaea;
+$color1: #ff2e63;
+$color2: #252a34;
+$color3: #08d9d6;
+
+@mixin box_shadow
+{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.frame 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $bgcolor;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#outer_circle
+{
+	position: absolute;
+	cursor: pointer;
+	top:175px;
+	left:175px;
+	width:50px;
+	height:50px;
+	border: 2px solid $color3;
+	border-radius:50%;
+	background: $color3;
+	@include box-shadow;
+}
+
+#inner_circle
+{
+	height:50px;
+	width: 50px;
+	background: $color1;
+	border-radius:50%;
+	@include box-shadow;
+	transition: all .5s ease-in-out;
+}
+
+.shrink
+{
+	transform: scaleX(.5) scaleY(.5);
+}
+
