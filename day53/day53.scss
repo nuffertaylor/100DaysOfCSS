@@ -1,0 +1,85 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$blue: #7bb0f1;
+
+// use only the available space inside the 400x400 frame
+#frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #ffcaaf;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.slider-container {
+	background: white;
+	width: 250px;
+	height: 50px;
+	border-radius: 5px;
+	position: relative;
+}
+
+.slider-line {
+	width: 90%;
+	height: 5px;
+	background: $blue;
+	border-radius: 10px;
+	position: absolute;
+	left: 5%;
+	top: 50%;
+}
+
+#slider-grab {
+	cursor: grab;
+	border-radius: 50%;
+	height: 23px;
+	width: 23px;
+	background: white;
+	border: 2px solid $blue;
+	position: absolute;
+	top: 25%;
+	left: 112px;
+}
+
+.thing {
+	height: 12px;
+	background: #c7c7c7;
+	width: 3px;
+	border-radius: 5px;
+	position: absolute;
+}
+
+.left {
+	top: 5px;
+	left: 5px;
+}
+
+.right {
+	top: 5px;
+	right: 5px;
+}
+
+.center-thing {
+	height: 18px;
+	right: 10px;
+	top: 2px;
+}

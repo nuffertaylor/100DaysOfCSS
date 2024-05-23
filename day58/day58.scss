@@ -1,0 +1,116 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #ebc299;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.circle {
+	background: white;
+	border-radius: 50%;
+	position: absolute;
+	// border: 1px solid red;
+	// animation: stuff 5s ease-in infinite;
+	transition: hover 1s ease-in;
+		transform-style: preserve-3d;
+	transform: rotateX(-60deg);
+}
+
+
+
+.anim-container {
+	transform-style: preserve-3d;
+	transform: rotateX(-60deg);
+	position: relative;
+	margin-top: 100px;
+}
+
+.anim-container:hover {
+	transform: rotateX(60deg);
+}
+
+.t5 {
+	top: 25px;
+}
+
+@for $i from 1 through 6 {
+	.c#{$i} {
+		height: (50 * $i) + px;
+		width: (50 * $i) + px;
+		left: (50 + (-1 * (($i - 6) * 25))) + px;
+		top: ((-1 * (($i - 6) * 25)))  + px;
+	}
+	
+	@keyframes b-anim#{$i} {
+		0%, 100% {
+			opacity: 0;
+		}
+		20% {
+			opacity: 1;
+		}
+		50% {
+		top: (-1 * (($i - 6) * 50)) + px;
+		}
+		80% {
+			top: ((-1 * (($i - 6) * 25)))  + px;
+			opacity: 1;
+		}
+	}
+	.b#{$i} {
+		animation: b-anim#{$i} 5s ease-in infinite;
+	}
+	
+	@keyframes t-anim#{$i} {
+		0%, 100% {
+			opacity: 0;
+		}
+		20% {
+			opacity: 1;
+		}
+		50% {
+		top: 0px;
+		}
+		80% {
+			top: ((-1 * (($i - 6) * 25)))  + px;
+			opacity: 1;
+		}
+	}
+	
+	.t#{$i} {
+		animation: t-anim#{$i} 5s ease-in infinite;
+		// top: ((-1 * (($i - 6) * 25)))  + px;
+	}
+}
+
+.ac {
+	animation: c-anim6 5s ease-in infinite;
+}
+
+@keyframes c-anim6 {
+	0%, 100% {
+		// width: 0px;
+		// height: 0px;
+		transform: scale(0);
+	}
+	20%, 80% {
+		// height: 300px;
+		// width: 300px;
+		transform: scale(1);
+	}
+}

@@ -1,0 +1,123 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,600,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+	background-image: url("https://i.imgur.com/X1nieDW.jpg");
+	  background-position: center; /* Center the image */
+
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+$gray: hsl(156, 2%, 46%);
+
+.bg-circle {
+	height: 250px;
+	width: 250px;
+	border-radius: 50%;
+	background: $gray;
+	box-shadow: 10px 10px 10px 10px #888888;
+	overflow: hidden;
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+}
+
+.bg-circle:hover > .dial > .indicator {
+	left: 75px;
+	top: 28px;
+	transform: rotate(-40deg);
+}
+
+$cool: #4984b8;
+$warm: #c8432b;
+$grad: linear-gradient(to right, $cool, $warm);
+
+.dial {
+	width: 225px;
+	height: 225px;
+	border-radius: 50%;
+	background: $grad;
+	position: relative;
+}
+
+.dial > * {
+	position: absolute;
+}
+
+$lightgray: hsl(156, 2%, 55%);
+$offwhite: #f2f2f2;
+
+.center-circle {
+	background: $lightgray;
+	height: 190px;
+	width: 190px;
+	border-radius: 50%;
+	top: 8%;
+	left: 8%;
+	text-align: center;
+	user-select: none;
+	color: $offwhite;
+}
+
+.cover-square {
+	background: $gray;
+	width: 150px;
+	height: 150px;
+	transform: rotate(45deg);
+	bottom: -50px;
+	left: 40px;
+}
+
+.indicator {
+	background: $offwhite;
+	width: 1px;
+	height: 15px;
+	top: 50px;
+	left: 50px;
+	transform: rotate(-45deg);
+	transition: all ease-in .5s;
+}
+
+.botdeg:after {
+	content: '°';
+	position: absolute;
+	top: 70px;
+	right: 40px;
+	color: #64799c;
+	font-weight: 600;
+	font-size: 1.5em;
+}
+
+
+.topnum {
+	margin-top: 35px;
+}
+
+.botnum {
+	font-size: 5em;
+	font-weight: 600;
+	color: #64799c;
+}

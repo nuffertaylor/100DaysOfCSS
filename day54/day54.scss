@@ -1,0 +1,109 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$bg: #314051;
+$l1: #476381;
+$l2: #6890bb;
+$l3: #89b3e1;
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $bg;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.layer {
+	width: 150%;
+	position: absolute;
+	bottom: 0;
+	left: -25%;
+}
+
+#l1 {
+	height: 200px;
+	animation: wave 5s linear infinite;
+}
+
+#l2 {
+	height: 130px;
+	animation: wave 6s linear infinite;
+}
+
+#l3 {
+	height: 60px;
+	animation: wave 6.5s linear infinite;
+}
+
+.bottomRect {
+	width: 150%;
+	height: 200px;
+}
+
+.circ {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.circRow {
+	display: flex;
+	position: absolute;
+	top: -25px;
+}
+
+.c0 {
+	background: $bg;
+}
+.c1 {
+	background: $l1;
+}
+.c2 {
+	background: $l2;
+}
+.c3 {
+	background: $l3;
+}
+
+@keyframes wave {
+	0%, 66% { left: -25%; }
+	33% { left: 0; }
+	100% { left: -50%; }
+}
+
+.lightning {
+	width: 100%;
+	height: 100%;
+	animation: flash 7s linear infinite;
+	position: absolute;
+}
+
+img {
+	filter: invert(100%);
+	transform: rotate(80deg);
+}
+
+@keyframes flash {
+	0%, 44%, 47% {
+		display: none;
+	}
+	45% {
+		display: block;
+	}
+	46% {
+		background: white;
+	}
+}

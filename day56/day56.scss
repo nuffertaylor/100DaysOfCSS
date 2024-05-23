@@ -1,0 +1,61 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #519472;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#flower {
+	position: absolute;
+	left: 200px;
+	top: 200px;
+	animation: spin 5s linear infinite;
+}
+
+.petal {
+	width: 100px;
+	opacity: .8;
+	height: 100px;
+	background: #da7198;
+	border-radius: 4px 100px;
+	position: absolute;
+}
+
+.core {
+	background: white;
+	width: 50px;
+	height: 50px;
+	opacity: .8;
+	border-radius: 50px;
+	position: absolute;
+	top: 25px;
+	left: 25px;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0);
+	}
+	60% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
