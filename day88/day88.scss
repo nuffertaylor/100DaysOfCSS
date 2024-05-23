@@ -1,0 +1,104 @@
+$background:#2d4059;
+$candle-body:#e5e5e5;
+$candle-shadow:#decdc3;
+$candle-wick:#6e6d6d;
+$table:#613613;
+$table-dark:#351e10;
+
+.frame 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $background;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.candle-flame
+{
+		position: absolute;
+		width: 16px;
+		height: 26px;
+		bottom:225px;
+		left:195px;
+		background: #FFAD00;
+		border-radius: 8px 8px 8px 8px / 20px 20px 8px 8px;
+		z-index:2;
+		animation: flicker 5s ease-in-out infinite, falter 10s ease-in-out infinite;
+}
+
+.candle-wick
+{
+	width:6px;
+	height:20px;
+	background:$candle-wick;
+	position:absolute;
+	top:165px;
+	left:200px;
+}
+
+.candle-body
+{
+	width:110px;
+	height:100px;
+	background:$candle-body;
+	border-radius:10px;
+	border-right: 15px solid $candle-shadow;
+	position:absolute;
+	top:185px;
+	left:140px;
+}
+
+.candle-base
+{
+	width:200px;
+	height:6px;
+	border-radius:5px;
+	background:gold;
+	position:absolute;
+	top:285px;
+	left:100px;
+}
+
+.table
+{
+	width:100%;
+	height:115px;
+	background:linear-gradient($table,$table-dark);
+	position:absolute;
+	top:291px;
+}
+
+
+@keyframes flicker
+{
+	0%, 22%, 49%, 62%, 81%, 100% {
+		box-shadow: 0 0 20px 0 rgba(255,202,0,0.7);
+		transform: scale(.9);
+	}
+	14%, 32%, 56%, 70%, 89% {
+		box-shadow: 0 0 20px 0 rgba(255,202,0,.8);
+		transform: scale(1.1);
+	}
+}
+
+@keyframes falter
+{
+	0%, 22%, 49%, 62%, 81%, 100% 
+	{
+				border-radius: 4px 12px 8px 8px / 20px 20px 8px 8px;
+	}
+	14%, 32%, 56%, 70%, 89%
+	{border-radius: 12px 4px 8px 8px / 20px 20px 8px 8px;}
+}
+

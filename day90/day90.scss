@@ -1,0 +1,58 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$blue: hsl(203, 19%, 56%);
+
+// use only the available space inside the 400x400 frame
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	background: $blue;
+	color: #333;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#cover {
+	background: $blue;
+	width: 100px;
+	height: 100px;
+	transform: rotate(45deg);
+	position: absolute;
+	z-index: 3;
+}
+
+.line-row {
+	display: flex;
+	height: 20px;
+	z-index: 1;
+}
+
+.line {
+	height: 1px;
+	width: 200px;
+	background: white;
+	transition: transform .5s ease-in;
+}
+
+.left {
+	transform: translateX(-200px);
+}
+
+.right {
+	transform: translateX(200px);
+}
+
+.close > * {
+	transform: translateX(0) !important;
+}

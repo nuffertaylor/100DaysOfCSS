@@ -1,0 +1,52 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: hsl(133, 42%, 70%);
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.circle-row {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	height: 5px;
+	top: 195px;
+}
+
+.circle {
+	height: 2px;
+	width: 2px;
+	border-radius: 50%;
+	background: white;
+}
+
+@for $i from 0 through 100 {
+	.c#{$i} {
+		animation: move#{$i} 4s linear infinite;
+	}
+	
+	@keyframes move#{$i} {
+		$offset: ($i * $i/ 60);
+		0%, 50%, 100% {
+			transform: translateY(0);
+		}
+		25% { transform: translateY($offset + px)}
+		75% { transform: translateY( (-1 * $offset) + px)}
+	}
+}

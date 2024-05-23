@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$foreground:#b2ebf2;
+$background:#00bcd4;
+$ball:#ff5722;
+$shadow:#dd2c00;//or use bg color
+
+.frame 
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $background;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.foreground
+{
+	position:absolute;
+	width:100%;
+	height:100px;
+	z-index:1;
+	top:300px;
+	background:$foreground;
+}
+
+.ball
+{
+	height:50px;
+	width:50px;
+	border-radius:50%;
+	background:$ball;
+	position:absolute;
+	z-index:3;
+	left:-50px;
+	animation: 2s bounce cubic-bezier(0,0,.38,1)
+infinite;
+}
+
+@keyframes bounce
+{
+	0%{top:0px;left:-50px;}
+	30%{top:325px;left:100px;}
+	40%{top:200px;left:150px;}
+	50%{top:325px;left:200px;}
+	60%{top:250px;left:240px;}
+	70%{top:325px;left:280px;}
+}
+

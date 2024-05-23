@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+$offwhite:#f5f5f5;
+$green:#32cd32;
+
+.frame
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #cbeaed;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.button
+{
+	height:30px;
+	width:75px;
+	background:$offwhite;
+	text-align:center;
+	font-size:18px;
+	border-radius:20px;
+	border: 3px solid $offwhite;
+	line-height:30px;
+	transform-style: preserve-3d;
+	cursor:pointer;
+	user-select:none;
+	position:absolute;
+	top:185px;
+	left:160px;
+	transition:all .5s ease-in-out;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+
+}
+
+.front{z-index:2;}
+
+.back
+{
+	transform:rotateX(180deg);
+	z-index:1;
+}
+
+#back-btn
+{
+	background:$green;
+	color:$offwhite;
+}

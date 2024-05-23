@@ -1,0 +1,85 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #4c408e;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: grid;
+	place-items: center;
+}
+
+.cradle {
+	width: 200px;
+	height: 200px;
+}
+
+.top {
+	width: 200px;
+	height: 8px;
+	border-radius: 5px;
+	background: #D3D3D3;
+}
+
+.ball-row {
+	height: 175px;
+	width: 100%;
+	display: flex;
+}
+
+.string {
+	height: 120px;
+	width: 1px;
+	background: gray;
+	margin-left: 20px;
+}
+
+.ball {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #D3D3D3;
+}
+
+.left {
+	animation: anim-left 2s ease-out infinite;
+	transform-origin: 20px 10px;
+}
+
+.right {
+	animation: anim-right 2s ease-out infinite;
+	animation-delay: 1s;
+	transform-origin: 20px 10px;
+}
+
+@keyframes anim-left {
+	0%, 25%, 75%, 100% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(45deg);
+	}
+}
+
+@keyframes anim-right {
+	0%, 25%, 75%, 100% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(-45deg);
+	}
+}

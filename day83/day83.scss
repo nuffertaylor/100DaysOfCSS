@@ -1,0 +1,63 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+$bg: #34404f;
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $bg;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ring {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	animation: move 1.5s ease-in infinite;
+	opacity: 0;
+}
+
+.rod {
+	position: absolute;
+	transform-origin: 50px 50px;
+	height: 50px;
+	width: 8px;
+	background: white;
+	border-radius: 10px;
+}
+
+#frame {
+	display: grid;
+	place-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+@keyframes move {
+	0% {
+		transform: scale(0) rotate(0);
+		opacity: 0.1;
+		
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: scale(6) rotate(360deg);
+		opacity: 1;
+	}
+}
