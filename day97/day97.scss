@@ -1,0 +1,106 @@
+$background:#07689f;
+$person:#ffc93c;
+
+.frame
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $background;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.person
+{
+	background:$person;
+	position:absolute;
+}
+
+.head
+{
+	border-radius:50%;
+	width:50px;
+	height:50px;
+	top:75px;
+	left:175px;
+}
+
+.torso
+{
+	height:125px;
+	width:50px;
+	border-radius:25px;
+	top:135px;
+	left:175px;
+}
+
+.leg
+{
+	height:115px;
+	width:18px;
+	border-radius:25px;
+	top:265px;
+}
+
+.left{left:180px;}
+
+.right{left:205px;}
+
+.arm
+{
+	width:12px;
+	border-radius:25px;
+}
+
+.left-
+{
+	height:100px;
+	transform:rotate(15deg);
+	top:145px;
+	left:148px;
+}
+
+.upper
+{
+	height:50px;
+	left:248px;
+	transform:rotate(-75deg);
+	top:135px;
+	animation:upper-wave ease-in-out 1s infinite;
+
+}
+
+.fore
+{
+	height:50px;
+	transform:rotate(15deg);
+	top:120px;
+	left:273px;
+	animation:fore-wave ease-in-out 1s infinite;
+}
+
+@keyframes fore-wave
+{
+	50%
+	{
+		transform:rotate(35deg);
+		left:280px;
+	}
+}
+
+@keyframes upper-wave
+{
+	50%
+	{
+		transform:rotate(-80deg);
+	}
+}

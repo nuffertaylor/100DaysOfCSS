@@ -1,0 +1,295 @@
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #badcb4;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.point {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: white;
+}
+
+.p0 {
+	top: 192px;
+	animation: zero-one 3s linear infinite;
+}
+
+.p1 {
+	left: 192px;
+	animation: one-zero 3s linear infinite;
+}
+
+@keyframes zero-one {
+	0%, 100% { 
+		top: 192px;
+		left: 0px;
+	}
+	50% { 
+		top: 0px;
+		left: 192px;
+	}
+}
+
+@keyframes one-zero {
+	50% { 
+		top: 192px;
+		left: 0px;
+	}
+	0%, 100% { 
+		top: 0px;
+		left: 192px;
+	}
+}
+
+.p2 {
+	top: 192px;
+	right: 0px;
+	animation: two-three 3s linear infinite;
+}
+
+.p3 {
+	right: 192px;
+	animation: three-two 3s linear infinite;
+}
+
+@keyframes two-three {
+	0%, 100% { 
+		top: 192px;
+		right: 0px;
+	}
+	50% { 
+		top: 0px;
+		right: 192px;
+	}
+}
+
+@keyframes three-two {
+	50% { 
+		top: 192px;
+		right: 0px;
+	}
+	0%, 100% { 
+		top: 0px;
+		right: 192px;
+	}
+}
+
+.p4 {
+	bottom: 192px;
+	animation: four-five 3s linear infinite;
+}
+
+.p5 {
+	left: 192px;
+	bottom: 0px;
+	animation: five-four 3s linear infinite;
+}
+
+@keyframes four-five {
+	0%, 100% { 
+		bottom: 192px;
+		left: 0px;
+	}
+	50% { 
+		bottom: 0px;
+		left: 192px;
+	}
+}
+
+@keyframes five-four {
+	50% { 
+		bottom: 192px;
+		left: 0px;
+	}
+	0%, 100% { 
+		bottom: 0px;
+		left: 192px;
+	}
+}
+
+.p6 {
+	bottom: 192px;
+	right: 0px;
+	animation: six-seven 3s linear infinite;
+}
+
+.p7 {
+	right: 192px;
+	bottom: 0px;
+	animation: seven-six 3s linear infinite;
+}
+
+@keyframes six-seven {
+	0%, 100% { 
+		bottom: 192px;
+		right: 0px;
+	}
+	50% { 
+		bottom: 0px;
+		right: 192px;
+	}
+}
+
+@keyframes seven-six {
+	50% { 
+		bottom: 192px;
+		right: 0px;
+	}
+	0%, 100% { 
+		bottom: 0px;
+		right: 192px;
+	}
+}
+
+.p8 { // left corner to middle bottom
+	left: 0px;
+	top: 0px;
+	animation: eight 6s linear infinite;
+}
+
+.p9 { // left corner to middle right
+	left: 0px;
+	top: 0px;
+	animation: nine 6s linear infinite;
+}
+
+@keyframes eight {
+	0%, 100% {
+		left: 0px;
+		top: 0px;
+	}
+	50% {
+		left: 192px;
+		top: 384px;
+	}
+}
+
+@keyframes nine {
+	0%, 100% {
+		left: 0px;
+		top: 0px;
+	}
+	50% {
+		top: 192px;
+		left: 384px;
+	}
+}
+
+.p10 { // right corner to middle bottom
+	right: 0px;
+	top: 0px;
+	animation: ten 6s linear infinite;
+}
+
+.p11 { // right corner to middle right
+	right: 0px;
+	top: 0px;
+	animation: eleven 6s linear infinite;
+}
+
+@keyframes ten {
+	0%, 100% {
+		right: 0px;
+		top: 0px;
+	}
+	50% {
+		right: 192px;
+		top: 384px;
+	}
+}
+
+@keyframes eleven {
+	0%, 100% {
+		right: 0px;
+		top: 0px;
+	}
+	50% {
+		top: 192px;
+		right: 384px;
+	}
+}
+
+.p12 { // left corner to middle top
+	left: 0px;
+	bottom: 0px;
+	animation: twelve 6s linear infinite;
+}
+
+.p13 { // left corner to middle right
+	left: 0px;
+	bottom: 0px;
+	animation: thirteen 6s linear infinite;
+}
+
+@keyframes twelve {
+	0%, 100% {
+		left: 0px;
+		bottom: 0px;
+	}
+	50% {
+		left: 192px;
+		bottom: 384px;
+	}
+}
+
+@keyframes thirteen {
+	0%, 100% {
+		left: 0px;
+		bottom: 0px;
+	}
+	50% {
+		bottom: 192px;
+		left: 384px;
+	}
+}
+
+.p14 { // right corner to middle bottom
+	right: 0px;
+	bottom: 0px;
+	animation: fourteen 6s linear infinite;
+}
+
+.p15 { // right corner to middle right
+	right: 0px;
+	bottom: 0px;
+	animation: fifteen 6s linear infinite;
+}
+
+@keyframes fourteen {
+	0%, 100% {
+		right: 0px;
+		bottom: 0px;
+	}
+	50% {
+		right: 192px;
+		bottom: 384px;
+	}
+}
+
+@keyframes fifteen {
+	0%, 100% {
+		right: 0px;
+		bottom: 0px;
+	}
+	50% {
+		bottom: 192px;
+		right: 384px;
+	}
+}
+

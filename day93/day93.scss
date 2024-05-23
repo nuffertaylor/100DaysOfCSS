@@ -1,0 +1,133 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #ebc399;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.padlock-outer {
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top:150px;
+	background: #d3d3d3;
+	border-radius: 50%;
+	left : 100px;
+	z-index: 1;
+	
+}
+
+.padlock-inner {
+	width: 190px;
+	height: 190px;
+	position: absolute;
+	background: #333;
+	z-index: 2;
+	border-radius: 50%;
+	left: 105px;
+	top: 155px;
+	transition: transform 1s ease-in;
+	&:hover {
+		transform: rotate(359deg) translate3d(0,0,0);
+	}
+}
+
+.padlock-knob {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	background: #e8e8e8;
+	border-radius: 50%;
+	z-index: 3;
+	top: 225px;
+	left: 175px;
+}
+
+.label {
+	position: absolute;
+	color: white;
+	font-weight: 600;
+	font-size: 24px;
+	top: 20px;
+	left: -5px;
+	user-select: none;
+}
+
+.twodigits {
+	left: -10px;
+}
+
+.line {
+	position: absolute;
+	width: 2px;
+	height: 10px;
+	background: #ccc;
+	top: 90px;
+	left: 95px;
+
+	&:nth-child(5n+1) {
+		width: 3px;
+		height: 18px;
+		top: 86px;
+		left: 95px;
+		background: white;
+	}
+}
+
+@for $i from 1 through 40 {
+	$nullBase: $i - 1;
+	$degree: 360deg / 40 * $nullBase;
+	.l#{$i} {
+		transform: rotate($degree) translateY(-80px);
+
+		&:nth-child(5n+1) {
+			transform: rotate($degree) translateY(-76px);	
+		}
+
+	}
+}
+
+.top-shackle {
+	width: 100px;
+	height: 100px;
+	border: 10px #eee solid;
+	border-radius: 50%;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	transform: rotate(-45deg);
+	position: absolute;
+	left: 140px;
+	top: 50px;
+}
+
+.left-shackle, .right-shackle {
+	width: 10px;
+	height: 80px;
+	background: #eee;
+	position: absolute;
+	top: 110px;
+}
+
+.left-shackle {
+	left: 140px;
+}
+
+.right-shackle {
+	left: 250px;
+}

@@ -1,5 +1,7 @@
 These are all my solutions to the the [100 Days of CSS](https://100dayscss.com/).
 
+[You can see all my solutions displayed here](https://100dayscss.com/progress/nuffertaylor/). 
+
 This was a fun challenge.
 
 I generated all the files with this command:

@@ -1,0 +1,250 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: hsl(212, 25%, 25%);
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.triangle {
+   width: 0px;
+   height: 0px;
+   border-style: solid;
+	position: absolute;
+	z-index: 2;
+}
+
+.ta {
+	border-width: 0 100px 100px 100px;
+   border-color: transparent transparent hsl(208, 47%, 52%) transparent;
+	top: 200px;
+	left: 100px;
+	animation: move-ta 2s ease-in-out infinite;
+}
+
+@keyframes move-ta {
+	0%, 5%, 95%, 100% {
+		transform: translateY(0);
+	}
+	45%, 55% {
+		transform: translateY(100px);
+	}
+}
+
+.tb {
+	border-width: 100px 100px 100px 0;
+   border-color: transparent  hsl(208, 47%, 42%) transparent transparent;
+	top: 100px;
+	left: 200px;
+	animation: move-tb 2s ease-in-out infinite;
+}
+
+@keyframes move-tb {
+	0%, 5%, 95%, 100% {
+		transform: translateX(0);
+	}
+	45%, 55% {
+		transform: translateX(100px);
+	}
+}
+
+.tc {
+		border-width: 100px 100px 0 100px;
+   border-color: hsl(208, 47%, 36%) transparent transparent transparent;
+	left: 100px;
+	top: 100px;
+	animation: move-tc 2s ease-in-out infinite;
+}
+
+@keyframes move-tc {
+	0%, 5%, 95%, 100% {
+		transform: translateY(0);
+	}
+	45%, 55% {
+		transform: translateY(-100px);
+	}
+}
+
+.td {
+		border-width: 100px 0 100px 100px;
+   border-color: transparent transparent transparent hsl(208, 47%, 56%);
+	left: 100px;
+	top: 100px;
+	animation: move-td 2s ease-in-out infinite;
+}
+
+@keyframes move-td {
+	0%, 5%, 95%, 100% {
+		transform: translateX(0);
+	}
+	45%, 55% {
+		transform: translateX(-100px);
+	}
+}
+
+.pa {
+	position: absolute;
+	z-index: 1;
+}
+
+$darkorange: hsl(27, 67%, 54%);
+
+.particle-a {
+	width: 30px;
+	height: 30px;
+	background: $darkorange;
+	top: 200px;
+	left: 200px;
+	animation: move-particle-a 2s ease-in-out infinite;
+}
+
+@keyframes move-particle-a {
+	0%, 100% {
+		transform: rotate(22deg);
+	}
+	50% {
+		transform: translateY(-143px) translateX(46px) rotate(56deg);
+	}
+}
+$green: hsl(163, 41%, 53%);
+
+.particle-b {
+	width: 12px;
+	height: 12px;
+	background: $green;
+	top: 240px;
+	left: 180px;
+	animation: move-particle-b 2s ease-in-out infinite;
+}
+
+@keyframes move-particle-b {
+	0%, 100% {
+		transform: rotate(12deg);
+	}
+	50% {
+		transform: translateY(-143px) translateX(-46px) rotate(-60deg);
+	}
+}
+
+.particle-c {
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	border: 5px solid $green;
+	left: 192px;
+	top: 220px;
+animation: move-particle-c 2s ease-in-out infinite;
+}
+
+@keyframes move-particle-c {
+	0%, 100% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: translateY(-43px) translateX(76px);
+	}
+}
+
+$lightorange: hsl(35, 78%, 57%);
+
+.particle-d {
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	border: 3px solid $lightorange;
+	left: 192px;
+	top: 190px;
+animation: move-particle-d 2s ease-in-out infinite;
+}
+
+@keyframes move-particle-d {
+	0%, 100% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: translateY(43px) translateX(-76px);
+	}
+}
+
+.particle-e {
+	width: 20px;
+	height: 20px;
+	background: $lightorange;
+	top: 240px;
+	left: 180px;
+	animation: move-particle-e 2s ease-in-out infinite;
+}
+
+@keyframes move-particle-e {
+	0%, 100% {
+		transform: rotate(12deg);
+	}
+	50% {
+		transform: translateY(-143px) translateX(-6px) rotate(120deg);
+	}
+}
+
+.particle-f {
+	width: 6px;
+	height: 6px;
+	background: $green;
+	top: 240px;
+	left: 180px;
+	animation: move-particle-f 2s ease-in-out infinite;
+}
+
+@keyframes move-particle-f {
+	0%, 100% {
+		transform: rotate(12deg);
+	}
+	50% {
+		transform: translateY(43px) translateX(-46px) rotate(-60deg);
+	}
+}
+
+.particle-g {
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	border: 4px solid $darkorange;
+	left: 192px;
+	top: 220px;
+animation: move-particle-g 2s ease-in-out infinite;
+}
+
+@keyframes move-particle-g {
+	0%, 100% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: translateY(73px) translateX(76px);
+	}
+}
+
+.particle-h {
+	width: 22px;
+	height: 22px;
+	background: $green;
+	top: 210px;
+	left: 190px;
+	animation: move-particle-h 2s ease-in-out infinite;
+}
+
+@keyframes move-particle-h {
+	0%, 100% {
+		transform: rotate(12deg);
+	}
+	50% {
+		transform: translateY(56px) translateX(12px) rotate(-120deg);
+	}
+}

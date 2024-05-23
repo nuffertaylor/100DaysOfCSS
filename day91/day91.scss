@@ -1,0 +1,97 @@
+$red0: #c7404c;
+$red1: #cf4d54;
+$red2: #d75b5d;
+$red3: #df6965;
+$red4: #e8786d;
+$red5: #df6965;
+$red6: #d75b5d;
+$red7: #cf4d54;
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: $red4;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.circle-box {
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+
+.bl {
+	left: 100px;
+}
+.ur {
+	top: 100px;
+}
+.ul {
+	top: 100px;
+	left: 100px;
+}
+
+.circle-row {
+	display: flex;
+	width: 400px;
+	height: 200px;
+}
+
+@keyframes dark-to-light {
+	0%, 100% {
+		background: $red0;
+	}
+	14% { background: $red1; }
+	28% { background: $red2; }
+	42% { background: $red3; }
+	56% { background: $red4; }
+	60% { background: $red5; }
+	74% { background: $red6; }
+	88% { background: $red7; }
+}
+
+@for $i from 0 through 8 {
+	$x: (100 - ($i * 10)) + px;
+	.c#{$i} {
+		width: $x;
+		height: $x;
+animation: 5s dark-to-light linear infinite reverse;
+		animation-delay: ($i * 0.5) + s;
+		z-index: $i;
+		position: absolute;
+		border-radius: 50%;
+		
+	}
+	$offset: $i * 15;
+	$smOffset: $i * 5;
+	
+	.br#{$i} {
+		left: $offset + px;
+		top: $offset + px;
+	}
+	.bl#{$i} {
+		left: 100 - $smOffset + px;
+		top: $offset + px;
+	}
+	.ur#{$i} {
+		top: 100 - $smOffset + px;
+		left: $offset + px;
+	}
+	.ul#{$i} {
+		top: 100 - $smOffset + px;
+		left: 100 - $smOffset + px;
+	}
+	
+}
